@@ -1,0 +1,378 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+        url('../fonts/Roboto-Thin.ttf');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+        url('../fonts/Roboto-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+        url('../fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0 0 0 0;
+}
+
+.cont {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 82%;
+    position: relative;
+    overflow: hidden;
+
+    // @media only screen and (min-width: 2500px) {
+    //     width: 100%;
+    //     max-width: 1920px;
+    // }
+}
+
+.block {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    margin: 120px 10px 10px 10px;
+    border-radius: 50%;
+    text-align: center;
+    background: center center;
+    background-repeat: no-repeat;
+    background-color: #161616;
+    user-select: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.circles {
+    margin-bottom: 100px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Courier, monospace;
+    font-weight: normal;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 960px;
+    background: white;
+    user-select: none;
+
+    .headerTitle {
+
+        a {
+            cursor: pointer;
+            margin: 0 0 0 10px;
+            font-size: 35px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+    }
+
+    .headerCont {
+        display: flex;
+        min-height: 855px;
+
+        .leftForeword {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 40%;
+
+            h1 {
+                font-size: 115px;
+                font-weight: 700;
+                color: #d41525;
+                transform: translateX(-150%);
+                animation: ani 1s forwards;
+            }
+
+            p {
+                margin: 15px 0 0 0;
+                font-size: 30px;
+                font-weight: 700;
+                color: #161616;
+                transform: translateX(-150%);
+                animation: ani 1.3s forwards;
+            }
+        }
+
+        .rightForeword {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 60%;
+            background: url(../img/NewCanvas1.png);
+            background-size: 100%;
+
+            .sergeChef {
+                position: absolute;
+                z-index: 3;
+                cursor: pointer;
+                height: 700px;
+                width: 700px;
+                border-radius: 50%;
+                background: url(../img/serge_chef.png) center center;
+                background-size: 100%;
+                transition: 1s background-size ease-in-out;
+
+                &:hover {
+                    background-size: 120%;
+                }
+            }
+
+            // .underChef {
+            //     position: relative;
+            //     z-index: 2;
+            //     top: 70px;
+            //     left: 40px;
+            //     height: 650px;
+            //     width: 750px;
+            //     background: #d41525;
+            //     border-radius: 450% 230% 340% 420%;
+            //     animation: zhizn 10s infinite ease-in-out;
+            // }
+        }
+    }
+}
+
+main {
+
+
+    h3 {
+        font-size: 35px;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+    }
+
+    .forBack {
+        background: url(../img/back_hot.jpg) no-repeat;
+        background-size: cover;
+        user-select: none;
+
+        .forDescription {
+            display: flex;
+            align-items: center;
+            height: 1080px;
+
+            .desc {
+                margin: 250px 0 0 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 650px;
+                width: 500px;
+                background: white;
+                color: #161616;
+
+                h2,
+                p {
+                    margin: 0 50px;
+                }
+
+                h2 {
+                    margin-bottom: 30px;
+                    position: relative;
+                    font-size: 40px;
+                    text-transform: uppercase;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -6px;
+                        height: 2px;
+                        width: 60px;
+                        background: #d41525;
+                    }
+                }
+
+                p {
+                    margin-bottom: 5px;
+                    font-size: 25px;
+                }
+
+                .btn {
+                    cursor: pointer;
+                    margin: 20px 50px;
+                    width: 280px;
+                    padding: 17px;
+                    border: none;
+                    border-radius: 50px;
+
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 22px;
+                    background: #d41525;
+                    color: white;
+
+                    &:hover {
+                        background: #161616;
+                    }
+
+                    &:active {
+                        background: #161616;
+                    }
+                }
+            }
+        }
+    }
+
+    .forMenuBack {
+        background: url(../img/back.jpg) no-repeat;
+        background-size: cover;
+        user-select: none;
+
+        .blockMenu {
+            display: flex;
+            align-items: flex-end;
+            height: 850px;
+
+            .special {
+                margin: 100px auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 150px;
+                width: 300px;
+                text-transform: uppercase;
+                background: #d41525;
+            }
+        }
+    }
+
+    .forBackground {
+        background: #1c1819;
+        user-select: none;
+
+        .menuDirectory {
+            display: flex;
+            flex-direction: column;
+            height: 1300px;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+
+            h4 {
+                margin: 0 auto;
+                text-align: center;
+                font-size: 40px;
+                color: white;
+            }
+
+            .circleDrink1 {
+                background-image: url(../img/drink1.jpg);
+                background-size: 150%;
+            }
+
+            .circleDrink2 {
+                background-image: url(../img/drink2.jpg);
+                background-size: 180%;
+            }
+
+            .circleDrink3 {
+                background-image: url(../img/drink3.jpg);
+                background-size: 180%;
+            }
+
+            .circleDrink4 {
+                background-image: url(../img/drink4.jpg);
+                background-size: 140%;
+            }
+
+            .circleSalad1 {
+                background-image: url(../img/salad.jpg);
+                background-size: 130%;
+            }
+
+            .circleSalad2 {
+                background-image: url(../img/salad2.jpg);
+                background-size: 200%;
+            }
+
+            .circleSalad3 {
+                background-image: url(../img/salad3.jpg);
+                background-size: 230%;
+            }
+
+            .circleSalad4 {
+                background-image: url(../img/salad4.jpg);
+                background-size: 300%;
+            }
+        }
+    }
+}
+
+footer {
+    min-height: 100px;
+    background: #d41525;
+
+    .copy,
+    p {
+        margin: 32px 0;
+        color: white;
+        font-size: 15px;
+    }
+
+    .copySpan {
+        margin-right: 6px;
+    }
+}
+
+// @keyframes zhizn {
+//     to {
+//         border-radius: 450% 230% 340% 420%;
+//     }
+//     25% {
+//         border-radius: 330% 470% 250% 270%;
+//     }
+//     50% {
+//         border-radius: 320% 145% 230% 260%;
+//     }
+//     75% {
+//         border-radius: 330% 360% 350% 270%;
+//     }
+// }
+
+@keyframes ani {
+    0% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
